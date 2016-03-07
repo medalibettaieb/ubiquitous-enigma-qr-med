@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="qr-med-ejb">
+		<jta-data-source>java:jboss/datasources/MySQLDS</jta-data-source>
+		<class>tn.bettaieb.qr_med.persistence.Doctor</class>
+		<class>tn.bettaieb.qr_med.persistence.MediaclChekId</class>
+		<class>tn.bettaieb.qr_med.persistence.Medicine</class>
+		<class>tn.bettaieb.qr_med.persistence.Patient</class>
+		<class>tn.bettaieb.qr_med.persistence.Prescription</class>
+		<class>tn.bettaieb.qr_med.persistence.PrescriptionId</class>
+		<class>tn.bettaieb.qr_med.persistence.User</class>
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+		</properties>
+	</persistence-unit>
+</persistence>
