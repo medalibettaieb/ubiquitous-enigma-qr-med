@@ -27,7 +27,7 @@ public class MedicalTreatment implements Serializable {
 	@ManyToOne
 	@JoinColumns({
 			@JoinColumn(name = "idPatient", referencedColumnName = "idPatient", insertable = false, updatable = false),
-			@JoinColumn(name = "dateOfPrescription", referencedColumnName = "dateOfCheck", insertable = false, updatable = false),
+			@JoinColumn(name = "dateOfCheck", referencedColumnName = "dateOfCheck", insertable = false, updatable = false),
 			@JoinColumn(name = "idDoctor", referencedColumnName = "idDoctor", insertable = false, updatable = false), }
 
 	)
