@@ -6,8 +6,8 @@
 		<class>tn.bettaieb.qr_med.persistence.MediaclChekId</class>
 		<class>tn.bettaieb.qr_med.persistence.Medicine</class>
 		<class>tn.bettaieb.qr_med.persistence.Patient</class>
-		<class>tn.bettaieb.qr_med.persistence.Prescription</class>
-		<class>tn.bettaieb.qr_med.persistence.PrescriptionId</class>
+		<class>tn.bettaieb.qr_med.persistence.MedicalTreatment</class>
+		<class>tn.bettaieb.qr_med.persistence.MedicalTeatmentId</class>
 		<class>tn.bettaieb.qr_med.persistence.User</class>
 		<properties>
 			<property name="hibernate.hbm2ddl.auto" value="create-drop"/>

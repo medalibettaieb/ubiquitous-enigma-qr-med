@@ -23,7 +23,7 @@ public class MedicalCheck implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@OneToMany(mappedBy = "medicalCheck")
-	private List<Prescription> prescriptions;
+	private List<MedicalTreatment> medicalTreatments;
 
 	@ManyToOne
 	@JoinColumn(name = "idDoctor", referencedColumnName = "id", insertable = false, updatable = false)
@@ -60,12 +60,12 @@ public class MedicalCheck implements Serializable {
 		this.mediaclChekId = mediaclChekId;
 	}
 
-	public List<Prescription> getPrescriptions() {
-		return prescriptions;
+	public List<MedicalTreatment> getPrescriptions() {
+		return medicalTreatments;
 	}
 
-	public void setPrescriptions(List<Prescription> prescriptions) {
-		this.prescriptions = prescriptions;
+	public void setPrescriptions(List<MedicalTreatment> medicalTreatments) {
+		this.medicalTreatments = medicalTreatments;
 	}
 
 	public Doctor getDoctor() {

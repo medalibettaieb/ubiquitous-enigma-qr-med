@@ -23,7 +23,7 @@ public class Medicine implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
 	@OneToMany(mappedBy="medicine")
-	private List<Prescription> prescriptions;
+	private List<MedicalTreatment> medicalTreatments;
 
 	public Medicine() {
 		super();
@@ -48,11 +48,11 @@ public class Medicine implements Serializable {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public List<Prescription> getPrescriptions() {
-		return prescriptions;
+	public List<MedicalTreatment> getPrescriptions() {
+		return medicalTreatments;
 	}
-	public void setPrescriptions(List<Prescription> prescriptions) {
-		this.prescriptions = prescriptions;
+	public void setPrescriptions(List<MedicalTreatment> medicalTreatments) {
+		this.medicalTreatments = medicalTreatments;
 	}
    
 }

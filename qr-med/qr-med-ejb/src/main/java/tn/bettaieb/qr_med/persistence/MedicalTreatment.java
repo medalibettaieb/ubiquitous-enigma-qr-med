@@ -14,35 +14,26 @@ import javax.persistence.ManyToOne;
  */
 @Entity
 
-public class Prescription implements Serializable {
+public class MedicalTreatment implements Serializable {
 	@EmbeddedId
-	private PrescriptionId prescriptionId;
+	private MedicalTeatmentId medicalTeatmentId;
 	private Integer quantity;
 	private static final long serialVersionUID = 1L;
 
 	@ManyToOne
 	@JoinColumn(name = "idMedicine", referencedColumnName = "id", insertable = false, updatable = false)
 	private Medicine medicine;
-	// @ManyToOne
-	// @JoinColumns({ @JoinColumn(name = "idPatient", referencedColumnName = "",
-	// insertable = false, updatable = false),
-	// @JoinColumn(name = "dateOfCheck", referencedColumnName = "", insertable =
-	// false, updatable = false),
-	// @JoinColumn(name = "idDoctor", referencedColumnName = "", insertable =
-	// false, updatable = false), }
-	//
-	// )
-	// private MedicalCheck medicalCheck;
 
 	@ManyToOne
-	@JoinColumns({ @JoinColumn(name = "idPatient", referencedColumnName = "idPatient", insertable = false, updatable = false),
-			@JoinColumn(name = "dateOfCheck", referencedColumnName = "dateOfCheck", insertable = false, updatable = false),
+	@JoinColumns({
+			@JoinColumn(name = "idPatient", referencedColumnName = "idPatient", insertable = false, updatable = false),
+			@JoinColumn(name = "dateOfPrescription", referencedColumnName = "dateOfCheck", insertable = false, updatable = false),
 			@JoinColumn(name = "idDoctor", referencedColumnName = "idDoctor", insertable = false, updatable = false), }
 
 	)
 	private MedicalCheck medicalCheck;
 
-	public Prescription() {
+	public MedicalTreatment() {
 		super();
 	}
 
@@ -54,12 +45,12 @@ public class Prescription implements Serializable {
 		this.quantity = quantity;
 	}
 
-	public PrescriptionId getPrescriptionId() {
-		return prescriptionId;
+	public MedicalTeatmentId getPrescriptionId() {
+		return medicalTeatmentId;
 	}
 
-	public void setPrescriptionId(PrescriptionId prescriptionId) {
-		this.prescriptionId = prescriptionId;
+	public void setPrescriptionId(MedicalTeatmentId medicalTeatmentId) {
+		this.medicalTeatmentId = medicalTeatmentId;
 	}
 
 	public Medicine getMedicine() {

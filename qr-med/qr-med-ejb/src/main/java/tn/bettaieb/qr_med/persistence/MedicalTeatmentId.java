@@ -6,7 +6,7 @@ import java.util.Date;
 import javax.persistence.Embeddable;
 
 @Embeddable
-public class PrescriptionId implements Serializable {
+public class MedicalTeatmentId implements Serializable {
 	/**
 	 * 
 	 */
@@ -16,10 +16,10 @@ public class PrescriptionId implements Serializable {
 	private Integer idPatient;
 	private Date dateOfPrescription;
 
-	public PrescriptionId() {
+	public MedicalTeatmentId() {
 	}
 
-	public PrescriptionId(Integer idMedicine, Integer idDoctor, Integer idPatient, Date dateOfPrescription) {
+	public MedicalTeatmentId(Integer idMedicine, Integer idDoctor, Integer idPatient, Date dateOfPrescription) {
 		super();
 		this.idMedicine = idMedicine;
 		this.idDoctor = idDoctor;
@@ -46,7 +46,7 @@ public class PrescriptionId implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		PrescriptionId other = (PrescriptionId) obj;
+		MedicalTeatmentId other = (MedicalTeatmentId) obj;
 		if (dateOfPrescription == null) {
 			if (other.dateOfPrescription != null)
 				return false;
