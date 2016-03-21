@@ -24,9 +24,16 @@ public class Doctor extends User implements Serializable {
 		super();
 	}
 
-	public Doctor(String name,String speciality) {
+	public Doctor(String name, String speciality) {
 		this.setName(name);
 		this.speciality = speciality;
+	}
+
+	public Doctor(String name, String speciality, Float latitude, Float longitude) {
+		this.setName(name);
+		this.speciality = speciality;
+		setLatitude(latitude);
+		setLongitude(longitude);
 	}
 
 	public String getSpeciality() {

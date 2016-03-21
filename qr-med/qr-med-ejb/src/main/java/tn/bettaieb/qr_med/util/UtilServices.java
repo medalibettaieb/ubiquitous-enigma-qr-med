@@ -37,8 +37,8 @@ public class UtilServices {
 		Patient patient2 = new Patient("hadj", 13);
 		Patient patient3 = new Patient("karray", 14);
 
-		Doctor doctor = new Doctor("imed", "dhab7");
-		Doctor doctor2 = new Doctor("sana", "marj");
+		Doctor doctor = new Doctor("imed", "dhab7", 36.899372F, 10.189707F);
+		Doctor doctor2 = new Doctor("sana", "marj", 36.915862F, 10.141068F);
 
 		Medicine medicine = new Medicine("ECLARAN 5 gel p appl loc");
 		Medicine medicine2 = new Medicine("PRADAXA 110 mg gél");
